@@ -2,9 +2,12 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,minimal-ui,shrink-to-fit=no,viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
   <title>Scopri il nostro blog</title>
   <link href='style.css' rel='stylesheet'>
+  <link rel="preload" as="image" href="https://source.unsplash.com/random?1;w=500crop&entropyq=80&w=400">
 </head>
 <body>
   <main class="wrapper">
@@ -12,8 +15,8 @@
     <section>
       <article class="large-article">
         <img
-          src="https://source.unsplash.com/random?2;w=500crop&entropyq=80&w=400"
-          alt=""
+          src="https://source.unsplash.com/random?1;w=500crop&entropyq=80&w=400"
+          alt="Immagine di un articolo di esempio" fetchpriority="high" 
         />
   
         <h2 class="p1ch">Lorem ipsum dolor sit dolor consectetur</h2>
@@ -99,6 +102,12 @@
       </article>
     </section>
   </main>
+  <footer>
+    <object class="dark-mode-toggle" aria-label="Controlla la dark mode">		
+      <input type="checkbox" id="checkdarkmode"/>
+      <label for="checkdarkmode"></label>
+    </object>
   <script defer src="main.js"></script>
+  </footer> 
 </body>
 </html>

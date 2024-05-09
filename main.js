@@ -2,6 +2,7 @@
 console.log('Den');
 
 /*code*/
+//#bg
 (() => {
     const heading = document.querySelector('.heading'); // Select the element with the class 'heading'
     const body = document.body; // Select the body element
@@ -19,3 +20,17 @@ console.log('Den');
     // Listen for the mouse leaving the body to reset the background position
     body.addEventListener('mouseleave', resetBackgroundPosition);
 })();
+
+//#checkbox Storage
+(() => {
+    const checkDarkMode = document.querySelector('#checkdarkmode');
+    if(checkDarkMode){
+        // Controlla localStorage
+    checkDarkMode.checked = localStorage.getItem('darkMode') === 'true' ? true : false;
+    // Al check aggiorna localStorage
+    checkDarkMode.addEventListener('change', () => {
+      localStorage.setItem('darkMode',checkDarkMode.checked ? 'true' : 'false');
+    });
+    }
+  })();
+  
