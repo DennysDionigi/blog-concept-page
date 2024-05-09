@@ -12,7 +12,7 @@
     
     :root{
         --gradiente-conico:conic-gradient(#ff0000 12%, #00fff3 12%, #05d986 33%, #E7FBBE 33%, #E7FBBE 55%, #FFCBCB 55%, #fb980a 70%, #0ad1ff 70%, #B5DEFF 87%, #ffec21 87%);
-        --gradiente-titolo:linear-gradient(135deg, #222 50%, transparent 50%);
+        --gradiente-titolo:linear-gradient(135deg, #222 50%, dodgerblue 50%);
     }
       :root,
       body {
@@ -32,6 +32,7 @@
         padding-inline: 1rem;
         & .heading {
           font-size: clamp(calc(2.5rem - -5vw), 12vw, 15vw);
+          font-weight: 900;
           margin-bottom: 10vh;
           color: transparent;
       background: var(--gradiente-titolo);
@@ -39,11 +40,7 @@
       background-position: 100% 0;
       background-clip: text;  
       -webkit-background-clip: text;
-      /*-webkit-text-stroke: 1.5px #222;*/
-        -webkit-filter: drop-shadow(.5px .5px 0px black) drop-shadow(-.5px -.5px 0px black) drop-shadow(.5px .5px 0px black) drop-shadow(-.5px -.5px 0px black);
-        filter: drop-shadow(.5px .5px 0px black) drop-shadow(-.5px -.5px 0px black) drop-shadow(.5px .5px 0px black) drop-shadow(-.5px -.5px 0px black);
         -webkit-text-fill-color: transparent;
-        background-color: white;
       transition: all 0.6s ease-in-out;
       cursor: pointer;
       &:hover{
