@@ -35,11 +35,15 @@
           margin-bottom: 10vh;
           color: transparent;
       background: var(--gradiente-titolo);
-      background-size: 150vmax 100%;
+      background-size: 200vmax 100%;
       background-position: 100% 0;
       background-clip: text;  
       -webkit-background-clip: text;
-      -webkit-text-stroke: 1.5px #222;
+      /*-webkit-text-stroke: 1.5px #222;*/
+        -webkit-filter: drop-shadow(.5px .5px 0px black) drop-shadow(-.5px -.5px 0px black) drop-shadow(.5px .5px 0px black) drop-shadow(-.5px -.5px 0px black);
+        filter: drop-shadow(.5px .5px 0px black) drop-shadow(-.5px -.5px 0px black) drop-shadow(.5px .5px 0px black) drop-shadow(-.5px -.5px 0px black);
+        -webkit-text-fill-color: transparent;
+        background-color: white;
       transition: all 0.6s ease-in-out;
       cursor: pointer;
       &:hover{
