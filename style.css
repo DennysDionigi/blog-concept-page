@@ -12,7 +12,7 @@
     
     :root{
         --gradiente-conico:conic-gradient(#ff0000 12%, #00fff3 12%, #05d986 33%, #E7FBBE 33%, #E7FBBE 55%, #FFCBCB 55%, #fb980a 70%, #0ad1ff 70%, #B5DEFF 87%, #ffec21 87%);
-        --gradiente-titolo:linear-gradient(135deg, #222 50%, dodgerblue 50%);
+        --gradiente-titolo:linear-gradient(135deg, #4a4a4a 50%, dodgerblue 50%);
     }
       :root,
       body {
@@ -146,61 +146,78 @@
       }
 
       /*toggle dark mode*/
-      .dark-mode-toggle {
-        position: fixed;
-        top: 5%;
-        right: 5%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        & label {
-          position: relative;
-                display:flex;
-            place-content:center;
-            place-items:center;
-          width: 45px;
-          height: 25px;
-          border-radius: 100px;
-          background-color: #000839;
-          overflow: clip;
-          cursor: pointer;
-          &::before,
-          &::after {
-            display: block;
-            position: absolute;
-            place-self:center;
-            content: "";
-            width: 13px;
-            height: 13px;
-            border-radius: 50%;
-            left: 7%;
-            transition: 0.5s ease;
-            will-change: transform;
-          }
-          &::before {
-            background-color: #ffa41b;
-          }
-      
-          &::after {
-            background-color: #000839;
-            left: -50%;
-            transform: scale(0.00001);
-          }
-        }
-      
-        input[type="checkbox"] {
-          opacity: 0;
-          appearance: none;
-          -webkit-appearance: none;
-          &:checked + label {
-            &::before {
-              background-color: #fff;
-              transform: translateX(200%);
-            }
-      
-            &::after {
-              transform: translateX(345%) scale(1);
-            }
-          }
-        }
+.dark-mode-toggle {
+  position: fixed;
+  top: 5%;
+  right: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  & label {
+    position: relative;
+    display: flex;
+    place-content: center;
+    place-items: center;
+    width: 55px;
+    height: 30px;
+    border-radius: 100px;
+    background-color: #000;
+    overflow: clip;
+    cursor: pointer;
+    &::before,
+    &::after {
+      display: block;
+      position: absolute;
+      place-self: center;
+      content: "";
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      left: 7%;
+      transition: 0.5s ease;
+      will-change: transform;
+    }
+    &::before {
+      background-color: #ffa41b;
+    }
+
+    &::after {
+      background-color: #000;
+      left: -50%;
+      transform: scale(0.00001);
+    }
+  }
+
+  input[type="checkbox"] {
+    opacity: 0;
+    appearance: none;
+    -webkit-appearance: none;
+    &:checked + label {
+      &::before {
+        background-color: #fff;
+        transform: translateX(195%);
       }
+
+      &::after {
+        transform: translateX(345%) scale(1);
+      }
+    }
+  }
+}
+
+/* #custom darkmode*/
+
+:has(#checkdarkmode:checked) {
+  & body {
+    background: #161616;
+  }
+  & img {
+    filter: brightness(0.6);
+  }
+}
+
+/*# dark mode del sistema operativo*/
+/*
+  @media (prefers-color-scheme: dark){}
+  @media (prefers-color-scheme: light){} //default
+  */

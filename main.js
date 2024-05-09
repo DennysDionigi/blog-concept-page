@@ -22,7 +22,7 @@ console.log('Den');
 })();
 
 //#checkbox Storage
-(() => {
+/*(() => {
     const checkDarkMode = document.querySelector('#checkdarkmode');
     if(checkDarkMode){
         // Controlla localStorage
@@ -32,5 +32,35 @@ console.log('Den');
       localStorage.setItem('darkMode',checkDarkMode.checked ? 'true' : 'false');
     });
     }
+  })();*/
+
+  //#checkbox migliorato
+  (() => {
+    const checkDarkMode = document.querySelector('#checkdarkmode');
+    if (checkDarkMode) {
+      // Check system theme and set initial checkbox state
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      const storedSetting = localStorage.getItem('darkMode');
+      
+      // Determine initial state of checkbox based on localStorage and system preference
+      if (storedSetting === null) { // If there is no stored setting
+        checkDarkMode.checked = prefersDark;
+      } else { // Use stored setting if available
+        checkDarkMode.checked = storedSetting === 'true' ? true : false;
+      }
+      
+      // Listen for changes in system preference
+      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+        checkDarkMode.checked = event.matches; // Update checkbox according to new preference
+        // Store the new preference
+        localStorage.setItem('darkMode', event.matches ? 'true' : 'false');
+      });
+  
+      // Update localStorage when checkbox state changes
+      checkDarkMode.addEventListener('change', () => {
+        localStorage.setItem('darkMode', checkDarkMode.checked ? 'true' : 'false');
+      });
+    }
   })();
+  
   
