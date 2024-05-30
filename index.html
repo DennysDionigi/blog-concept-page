@@ -7,77 +7,56 @@
   <meta name="mobile-web-app-capable" content="yes">
   <title>Scopri il nostro blog</title>
   <link href='style.css' rel='stylesheet'>
-  <link rel="preload" as="image" href="https://source.unsplash.com/random?1;w=500crop&entropyq=80&w=400">
+  <link rel="preload" as="image" href="https://source.unsplash.com/random?1">
 </head>
 <body>
   <main class="wrapper">
-    <h1 class="heading">Scopri il nostro blog</h1>
+    <h1 class="heading" style="background-position: 100% 0px;">Scopri il nostro blog</h1>
     <section>
       <article class="large-article">
-        <img
-          src="https://source.unsplash.com/random?1;w=500crop&entropyq=80&w=400"
-          alt="Immagine di un articolo di esempio" fetchpriority="high" 
-        />
+        <img src="https://picsum.photos/600/600?random=1" alt="Immagine di un articolo di esempio" fetchpriority="high">
   
         <h2 class="p1ch">Lorem ipsum dolor sit dolor consectetur</h2>
         <div class="description">
           Lorem ipsum dolor sit amet elit dolor consectetur elit
           dolor amet ande.
         </div>
-        <div class="read__more"><a href="#" class="read__more_link">Leggi tutto</a></div>
+        <div class="read__more"><a href="#target1" class="read__more_link" tabindex="0" role="button">Leggi l'articolo</a></div>
       </article>
       <article>
-        <img
-          src="https://images.unsplash.com/photo-1650542918181-ba360683d936?crop=entropyq=80&w=400"
-          alt=""
-        />
+        <img src="https://images.unsplash.com/photo-1650542918181-ba360683d936?crop=entropyq=80&amp;w=400" alt="">
   
         <h2 class="p1ch">
           Lorem ipsum, dolor sit amet consectetur adipisicing
         </h2>
-        <div class="read__more"><a href="#" class="read__more_link">Leggi tutto</a></div>
+        <div class="read__more"><a href="#target2" class="read__more_link" tabindex="0" role="button">Leggi tutto</a></div>
       </article>
       <article>
-        <img
-          src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?crop=entropyq=80&w=400"
-          alt=""
-        />
+        <img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?crop=entropyq=80&amp;w=400" alt="">
   
         <h2 class="p1ch">Mollitia commodi, earum vitae</h2>
         <div class="read__more"><a href="#" class="read__more_link">Leggi tutto</a></div>
       </article>
       <article>
-        <img
-          src="https://source.unsplash.com/random?19;w=500crop&entropyq=80&w=400"
-          alt=""
-        />
+        <img src="https://picsum.photos/600/600?random=2" alt="">
   
         <h2 class="p1ch">maxime excepturi odio quasi voluptates</h2>
         <div class="read__more"><a href="#" class="read__more_link">Leggi tutto</a></div>
       </article>
       <article class="large-article">
-        <img
-          src="https://images.unsplash.com/photo-1650614967039-1cb97737df86?crop=entropyq=80&w=400"
-          alt=""
-        />
+        <img src="https://images.unsplash.com/photo-1650614967039-1cb97737df86?crop=entropyq=80&amp;w=400" alt="">
         <h2 class="p1ch">laboriosam iste quis, nihil dolor</h2>
         <div class="read__more"><a href="#" class="read__more_link">Leggi tutto</a></div>
       </article>
       <article>
-        <img
-          src="https://images.unsplash.com/photo-1650639012849-c66a018e107a?crop=entropyq=80&w=400"
-          alt=""
-        />
+        <img src="https://images.unsplash.com/photo-1650639012849-c66a018e107a?crop=entropyq=80&amp;w=400" alt="">
         <h2 class="p1ch">
           voluptatem dolore. Numquam Veniam deleniti
         </h2>
         <div class="read__more"><a href="#" class="read__more_link">Leggi tutto</a></div>
       </article>
       <article>
-        <img
-          src="https://images.unsplash.com/photo-1650637472771-16fedc3c6668?crop=entropyq=80&w=400"
-          alt=""
-        />
+        <img src="https://images.unsplash.com/photo-1650637472771-16fedc3c6668?crop=entropyq=80&amp;w=400" alt="">
   
         <h2 class="p1ch">
           amet consectetur adipisicing elit amet consectetur
@@ -85,23 +64,27 @@
         <div class="read__more"><a href="#" class="read__more_link">Leggi tutto</a></div>
       </article>
       <article>
-        <img
-          src="https://source.unsplash.com/random?66;w=500crop&entropyq=80&w=400"
-          alt=""
-        />
+        <img src="https://picsum.photos/600/600?random=3" alt="">
         <h2 class="p1ch">Totam iusto adipisci quidem</h2>
         <div class="read__more"><a href="#" class="read__more_link">Leggi tutto</a></div>
       </article>
       <article class="large-article">
-        <img
-          src="https://images.unsplash.com/photo-1650614967039-1cb97737df86?crop=entropyq=80&w=400"
-          alt=""
-        />
+        <img src="https://picsum.photos/600/600?random=6" alt="">
         <h2 class="p1ch">Ultima card larga?</h2>
         <div class="read__more"><a href="#" class="read__more_link">Leggi tutto</a></div>
       </article>
     </section>
   </main>
+
+<aside id="target1" class="targets">
+<a class="article__close" href="#!" tabindex="0" role="button" ara-label="Chiudi l'articolo"><span class="close_icon">✕</span></span></a>
+AAAAAAA 1
+</aside>
+
+<aside id="target2" class="targets">
+  <a class="article__close" href="#!" tabindex="0" role="button">Close</a>
+  AAAAAAA 2
+</aside>
   <footer>
     <object class="dark-mode-toggle" aria-label="Controlla la dark mode">		
       <input type="checkbox" id="checkdarkmode"/>
